@@ -1,0 +1,29 @@
+import java.util.Arrays;
+import java.util.Collections;
+
+public class ArraySorter {
+    public static void main(String[] args) {
+        
+        // --- Integer Array ---
+        Integer[] numbers = {42, 7, 15, 93, 2};
+
+        // Ascending
+        Arrays.sort(numbers);
+        System.out.println("Integers (Asc): " + Arrays.toString(numbers));
+
+        // Descending
+        Arrays.sort(numbers, Collections.reverseOrder());
+        System.out.println("Integers (Desc): " + Arrays.toString(numbers));
+
+        // --- String Array ---
+        String[] fruits = {"Banana", "Apple", "Dragonfruit", "Cherry"};
+
+        // Ascending (Alphabetical)
+        Arrays.sort(fruits);
+        System.out.println("Strings (Asc): " + Arrays.toString(fruits));
+
+        // Descending (Reverse Alphabetical)
+        Arrays.sort(fruits, Collections.reverseOrder());
+        System.out.println("Strings (Desc): " + Arrays.toString(fruits));
+    }
+}
