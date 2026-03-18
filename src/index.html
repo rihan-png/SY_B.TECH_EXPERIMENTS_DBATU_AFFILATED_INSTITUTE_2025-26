@@ -3,26 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Analyst Portfolio | Sales Intelligence Dashboard</title>
+  <meta name="description" content="Interactive Sales Intelligence Dashboard — Data Analyst Portfolio by rihan-png" />
+  <title>Sales Intelligence Dashboard | Data Analyst Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Chart.js v4 -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <!-- PapaParse for CSV -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- Loading overlay -->
+  <div id="loading-overlay">
+    <div class="spinner"></div>
+    <span class="loading-text">Loading dashboard data…</span>
+  </div>
+
+  <!-- ── Header ── -->
   <header>
     <div class="header-inner">
       <div class="header-title">
-        <h1>&#128202; Sales Intelligence Dashboard</h1>
+        <h1>📊 Sales Intelligence Dashboard</h1>
         <p class="tagline">Interactive Data Analyst Portfolio &mdash; Powered by real data &amp; Chart.js</p>
       </div>
       <div class="header-links">
-        <a href="https://github.com/rihan-png/SY_B.TECH_EXPERIMENTS_DBATU_AFFILATED_INSTITUTE_2025-26" target="_blank" rel="noopener" class="btn-outline">&#128279; GitHub Repo</a>
+        <a href="https://github.com/rihan-png/SY_B.TECH_EXPERIMENTS_DBATU_AFFILATED_INSTITUTE_2025-26"
+           target="_blank" rel="noopener" class="btn-outline">🔗 GitHub Repo</a>
       </div>
     </div>
   </header>
 
-  <!-- Filters -->
+  <!-- ── Filters ── -->
   <section id="controls" aria-label="Dashboard Filters">
     <div class="controls-inner">
       <div class="filter-group">
@@ -39,72 +50,72 @@
         <label for="end-date">To</label>
         <input type="date" id="end-date" />
       </div>
-      <button id="apply-filters" class="btn-primary">&#128269; Apply Filters</button>
-      <button id="reset-filters" class="btn-secondary">&#8635; Reset</button>
+      <button id="apply-filters" class="btn-primary">🔍 Apply Filters</button>
+      <button id="reset-filters" class="btn-secondary">↺ Reset</button>
     </div>
   </section>
 
-  <!-- KPI Cards -->
+  <!-- ── KPI Cards ── -->
   <section id="kpi-section" aria-label="Key Performance Indicators">
     <div class="kpi-grid">
       <div class="kpi-card" id="kpi-sales">
-        <div class="kpi-icon">&#128176;</div>
+        <div class="kpi-icon">💰</div>
         <div class="kpi-content">
           <div class="kpi-label">Total Sales</div>
-          <div class="kpi-value" id="total-sales-val">&#8212;</div>
+          <div class="kpi-value" id="total-sales-val">—</div>
           <div class="kpi-sub" id="sales-trend"></div>
         </div>
       </div>
       <div class="kpi-card" id="kpi-conv">
-        <div class="kpi-icon">&#128257;</div>
+        <div class="kpi-icon">🔁</div>
         <div class="kpi-content">
           <div class="kpi-label">Conversion Rate</div>
-          <div class="kpi-value" id="conv-rate-val">&#8212;</div>
+          <div class="kpi-value" id="conv-rate-val">—</div>
           <div class="kpi-sub" id="conv-sub">conversions / visits</div>
         </div>
       </div>
       <div class="kpi-card" id="kpi-visits">
-        <div class="kpi-icon">&#128100;</div>
+        <div class="kpi-icon">👤</div>
         <div class="kpi-content">
           <div class="kpi-label">Total Visits</div>
-          <div class="kpi-value" id="total-visits-val">&#8212;</div>
+          <div class="kpi-value" id="total-visits-val">—</div>
           <div class="kpi-sub" id="visits-sub"></div>
         </div>
       </div>
       <div class="kpi-card" id="kpi-avg">
-        <div class="kpi-icon">&#128200;</div>
+        <div class="kpi-icon">📈</div>
         <div class="kpi-content">
           <div class="kpi-label">Avg Sales / Day</div>
-          <div class="kpi-value" id="avg-sales-val">&#8212;</div>
+          <div class="kpi-value" id="avg-sales-val">—</div>
           <div class="kpi-sub" id="avg-sub"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Charts -->
+  <!-- ── Charts ── -->
   <main>
     <div class="charts-grid">
       <div class="chart-card wide">
-        <h2 class="chart-title">&#128202; Sales Trend Over Time</h2>
+        <h2 class="chart-title">📈 Sales Trend Over Time</h2>
         <div class="chart-wrap">
           <canvas id="trend-line" aria-label="Sales trend line chart"></canvas>
         </div>
       </div>
       <div class="chart-card">
-        <h2 class="chart-title">&#127758; Sales by Region</h2>
+        <h2 class="chart-title">🌍 Sales by Region</h2>
         <div class="chart-wrap">
           <canvas id="sales-bar" aria-label="Sales by region bar chart"></canvas>
         </div>
       </div>
       <div class="chart-card">
-        <h2 class="chart-title">&#9685; Region Share</h2>
+        <h2 class="chart-title">▥ Region Share</h2>
         <div class="chart-wrap">
           <canvas id="region-doughnut" aria-label="Region share doughnut chart"></canvas>
         </div>
       </div>
       <div class="chart-card wide">
-        <h2 class="chart-title">&#128270; Conversions vs Visits</h2>
+        <h2 class="chart-title">🔎 Conversions vs Visits</h2>
         <div class="chart-wrap">
           <canvas id="scatter-chart" aria-label="Conversions vs visits scatter chart"></canvas>
         </div>
@@ -114,8 +125,8 @@
     <!-- Data Table -->
     <div class="table-section">
       <div class="table-header">
-        <h2 class="chart-title">&#128196; Data Table</h2>
-        <button id="export-csv" class="btn-outline small">&#8615; Export CSV</button>
+        <h2 class="chart-title">📄 Data Table</h2>
+        <button id="export-csv" class="btn-outline small">⇩ Export CSV</button>
       </div>
       <div class="table-wrap">
         <table id="data-table" aria-label="Filtered data table">
@@ -123,7 +134,7 @@
             <tr>
               <th>Date</th>
               <th>Region</th>
-              <th>Sales (&#8377;)</th>
+              <th>Sales (₹)</th>
               <th>Conversions</th>
               <th>Visits</th>
               <th>Conv. Rate</th>
@@ -136,26 +147,33 @@
     </div>
   </main>
 
-  <!-- About / Tools Section -->
+  <!-- ── About / Tools ── -->
   <section id="about" aria-label="About this project">
     <div class="about-inner">
-      <h2>&#128203; About This Project</h2>
-      <p>This dashboard demonstrates end-to-end Data Analyst skills: data cleaning with Python, interactive visualization, KPI tracking, and business storytelling — all deployed live via GitHub Pages.</p>
+      <h2>📋 About This Project</h2>
+      <p>
+        This dashboard demonstrates end-to-end Data Analyst skills: data cleaning with Python,
+        interactive visualization, KPI tracking, and business storytelling —
+        all deployed live via GitHub Pages.
+      </p>
       <div class="tools-grid">
-        <div class="tool-badge">&#128013; Python</div>
-        <div class="tool-badge">&#128200; Chart.js</div>
-        <div class="tool-badge">&#128196; Pandas</div>
-        <div class="tool-badge">&#128295; JavaScript</div>
-        <div class="tool-badge">&#128193; Jupyter</div>
-        <div class="tool-badge">&#129513; GitHub Pages</div>
-        <div class="tool-badge">&#128215; HTML / CSS</div>
-        <div class="tool-badge">&#128202; SQL</div>
+        <div class="tool-badge">🐍 Python</div>
+        <div class="tool-badge">📊 Chart.js</div>
+        <div class="tool-badge">📄 Pandas</div>
+        <div class="tool-badge">⚙️ JavaScript</div>
+        <div class="tool-badge">📓 Jupyter</div>
+        <div class="tool-badge">🚀 GitHub Pages</div>
+        <div class="tool-badge">🎨 HTML / CSS</div>
+        <div class="tool-badge">🗄️ SQL</div>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>Built by <a href="https://github.com/rihan-png" target="_blank" rel="noopener">rihan-png</a> &mdash; Data Analyst Portfolio &mdash; 2025&ndash;26</p>
+    <p>
+      Built by <a href="https://github.com/rihan-png" target="_blank" rel="noopener">rihan-png</a>
+      &mdash; Data Analyst Portfolio &mdash; 2025&ndash;26
+    </p>
     <p class="footer-sub">DBATU Affiliated Institute | SY B.Tech Experiments</p>
   </footer>
 
