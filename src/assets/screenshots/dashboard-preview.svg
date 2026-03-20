@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="hdr" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#2451a6"/>
+      <stop offset="100%" stop-color="#5b8fee"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#3b6cc9"/>
+      <stop offset="100%" stop-color="#2451a6"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="bar4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#f0f4fc"/>
+
+  <!-- Header bar -->
+  <rect width="1200" height="72" fill="url(#hdr)"/>
+  <text x="28" y="30" fill="white" font-family="Segoe UI,sans-serif" font-size="22" font-weight="700">📊 Sales Intelligence Dashboard</text>
+  <text x="28" y="55" fill="rgba(255,255,255,0.80)" font-family="Segoe UI,sans-serif" font-size="13">Interactive Data Analyst Portfolio · Chart.js · GitHub Pages</text>
+
+  <!-- Filter bar -->
+  <rect x="0" y="72" width="1200" height="44" fill="white" filter="url(#shadow)"/>
+  <rect x="28" y="84" width="130" height="22" rx="5" fill="#e8efff" stroke="#2451a6" stroke-width="1.5"/>
+  <text x="40" y="99" fill="#2451a6" font-family="Segoe UI,sans-serif" font-size="11" font-weight="600">Region: All ▾</text>
+  <rect x="174" y="84" width="130" height="22" rx="5" fill="#f8f9fb" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="186" y="99" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11">From: 2025-01-01</text>
+  <rect x="318" y="84" width="130" height="22" rx="5" fill="#f8f9fb" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="330" y="99" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11">To: 2025-06-03</text>
+  <rect x="462" y="82" width="110" height="26" rx="6" fill="#2451a6"/>
+  <text x="506" y="99" fill="white" font-family="Segoe UI,sans-serif" font-size="12" font-weight="600" text-anchor="middle">🔍 Apply Filters</text>
+
+  <!-- KPI Cards -->
+  <!-- Card 1 -->
+  <rect x="28" y="132" width="272" height="80" rx="10" fill="white" filter="url(#shadow)"/>
+  <rect x="28" y="132" width="4"   height="80" rx="2" fill="#2451a6"/>
+  <text x="48" y="155" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11" font-weight="700" letter-spacing="1">TOTAL SALES</text>
+  <text x="48" y="184" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="26" font-weight="700">₹ 8,52,900</text>
+  <text x="48" y="202" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11">5,472 conversions</text>
+
+  <!-- Card 2 -->
+  <rect x="316" y="132" width="272" height="80" rx="10" fill="white" filter="url(#shadow)"/>
+  <rect x="316" y="132" width="4"   height="80" rx="2" fill="#10b981"/>
+  <text x="336" y="155" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11" font-weight="700" letter-spacing="1">CONVERSION RATE</text>
+  <text x="336" y="184" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="26" font-weight="700">3.82%</text>
+  <text x="336" y="202" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11">conversions / visits</text>
+
+  <!-- Card 3 -->
+  <rect x="604" y="132" width="272" height="80" rx="10" fill="white" filter="url(#shadow)"/>
+  <rect x="604" y="132" width="4"   height="80" rx="2" fill="#7c3aed"/>
+  <text x="624" y="155" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11" font-weight="700" letter-spacing="1">TOTAL VISITS</text>
+  <text x="624" y="184" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="26" font-weight="700">1,43,200</text>
+  <text x="624" y="202" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11">5,472 converted</text>
+
+  <!-- Card 4 -->
+  <rect x="892" y="132" width="280" height="80" rx="10" fill="white" filter="url(#shadow)"/>
+  <rect x="892" y="132" width="4"   height="80" rx="2" fill="#f59e0b"/>
+  <text x="912" y="155" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11" font-weight="700" letter-spacing="1">AVG SALES / DAY</text>
+  <text x="912" y="184" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="26" font-weight="700">₹ 11,846</text>
+  <text x="912" y="202" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11">72 days in range</text>
+
+  <!-- Chart 1: Line chart (wide) -->
+  <rect x="28" y="230" width="770" height="200" rx="10" fill="white" filter="url(#shadow)"/>
+  <text x="48" y="256" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="13" font-weight="700">📈 Sales Trend Over Time</text>
+  <!-- Line path -->
+  <polyline points="80,390 150,370 220,360 290,340 360,325 430,310 500,295 570,280 640,265 710,250 755,240"
+    fill="none" stroke="#2451a6" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="80,390 150,370 220,360 290,340 360,325 430,310 500,295 570,280 640,265 710,250 755,240 755,400 80,400"
+    fill="rgba(36,81,166,0.07)"/>
+  <!-- Points -->
+  <circle cx="80"  cy="390" r="4" fill="#2451a6"/>
+  <circle cx="220" cy="360" r="4" fill="#2451a6"/>
+  <circle cx="360" cy="325" r="4" fill="#2451a6"/>
+  <circle cx="500" cy="295" r="4" fill="#2451a6"/>
+  <circle cx="640" cy="265" r="4" fill="#2451a6"/>
+  <circle cx="755" cy="240" r="4" fill="#2451a6"/>
+
+  <!-- Chart 2: Bar chart -->
+  <rect x="814" y="230" width="358" height="200" rx="10" fill="white" filter="url(#shadow)"/>
+  <text x="834" y="256" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="13" font-weight="700">🌍 Sales by Region</text>
+  <!-- Bars -->
+  <rect x="850"  y="310" width="50" height="100" rx="5" fill="url(#bar1)"/>
+  <rect x="920"  y="330" width="50" height="80"  rx="5" fill="url(#bar2)"/>
+  <rect x="990"  y="345" width="50" height="65"  rx="5" fill="url(#bar3)"/>
+  <rect x="1060" y="320" width="50" height="90"  rx="5" fill="url(#bar4)"/>
+  <text x="875"  y="424" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11" text-anchor="middle">North</text>
+  <text x="945"  y="424" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11" text-anchor="middle">South</text>
+  <text x="1015" y="424" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11" text-anchor="middle">East</text>
+  <text x="1085" y="424" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11" text-anchor="middle">West</text>
+
+  <!-- Table preview -->
+  <rect x="28" y="446" width="1144" height="156" rx="10" fill="white" filter="url(#shadow)"/>
+  <text x="48" y="470" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="13" font-weight="700">📄 Data Table</text>
+  <!-- Table header -->
+  <rect x="28" y="478" width="1144" height="28" rx="0" fill="#2451a6"/>
+  <text x="60"   y="497" fill="white" font-family="Segoe UI,sans-serif" font-size="11" font-weight="600">Date</text>
+  <text x="220"  y="497" fill="white" font-family="Segoe UI,sans-serif" font-size="11" font-weight="600">Region</text>
+  <text x="400"  y="497" fill="white" font-family="Segoe UI,sans-serif" font-size="11" font-weight="600">Sales (₹)</text>
+  <text x="600"  y="497" fill="white" font-family="Segoe UI,sans-serif" font-size="11" font-weight="600">Conversions</text>
+  <text x="800"  y="497" fill="white" font-family="Segoe UI,sans-serif" font-size="11" font-weight="600">Visits</text>
+  <text x="1000" y="497" fill="white" font-family="Segoe UI,sans-serif" font-size="11" font-weight="600">Conv. Rate</text>
+  <!-- Row 1 -->
+  <rect x="28" y="506" width="1144" height="28" fill="#f8faff"/>
+  <text x="60"   y="524" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">2025-01-01</text>
+  <rect x="208" y="511" width="52" height="17" rx="8" fill="#dbeafe"/>
+  <text x="234"  y="524" fill="#1d4ed8" font-family="Segoe UI,sans-serif" font-size="11" text-anchor="middle">North</text>
+  <text x="400"  y="524" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">₹ 12,000</text>
+  <text x="600"  y="524" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">320</text>
+  <text x="800"  y="524" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">8,500</text>
+  <text x="1000" y="524" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">3.76%</text>
+  <!-- Row 2 -->
+  <rect x="28" y="534" width="1144" height="28" fill="white"/>
+  <text x="60"   y="552" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">2025-01-01</text>
+  <rect x="208" y="539" width="52" height="17" rx="8" fill="#dcfce7"/>
+  <text x="234"  y="552" fill="#166534" font-family="Segoe UI,sans-serif" font-size="11" text-anchor="middle">South</text>
+  <text x="400"  y="552" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">₹ 9,500</text>
+  <text x="600"  y="552" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">280</text>
+  <text x="800"  y="552" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">7,200</text>
+  <text x="1000" y="552" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">3.89%</text>
+  <!-- Row 3 -->
+  <rect x="28" y="562" width="1144" height="28" fill="#f8faff"/>
+  <text x="60"   y="580" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">2025-01-01</text>
+  <rect x="208" y="567" width="42" height="17" rx="8" fill="#fef3c7"/>
+  <text x="229"  y="580" fill="#92400e" font-family="Segoe UI,sans-serif" font-size="11" text-anchor="middle">East</text>
+  <text x="400"  y="580" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">₹ 7,800</text>
+  <text x="600"  y="580" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">210</text>
+  <text x="800"  y="580" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">6,100</text>
+  <text x="1000" y="580" fill="#1e293b" font-family="Segoe UI,sans-serif" font-size="11">3.44%</text>
+
+  <!-- Showing N records -->
+  <text x="48" y="614" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11">Showing 72 records</text>
+</svg>
